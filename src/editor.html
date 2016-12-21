@@ -2,7 +2,7 @@
   <form class="col s6" v-on:submit.prevent="submitted">
     <div class="row">
       <div class="input-field col s12">
-        <textarea id="textarea1" v-model="body" class="materialize-textarea"></textarea>
+        <textarea id="textarea1" v-model="message" class="materialize-textarea"></textarea>
         <label for="textarea1">Textarea</label>
       </div>
     </div>
@@ -12,5 +12,5 @@
       </button>
     </div>
   </form>
-  <div id="preview" class="col s6" v-html="body"></div>
+  <div id="preview" class="col s6" v-html="message"></div>
 </div>
