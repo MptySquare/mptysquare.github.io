@@ -8,13 +8,13 @@ export default {
   template: template,
   data: function() {
     return {
-      body: ''
+      message: ''
     }
   },
   
   methods: {
     submitted: function(evt) {
-      db.posts.push({body: this.body})
+      db.posts.push({message: this.message})
     }
   }
 }

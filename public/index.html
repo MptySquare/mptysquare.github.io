@@ -5,29 +5,29 @@
   </head>
   <body>
     <div id="view-container">
-      <div class="container">
-        <editor></editor>
-      </div>
+      <router-view></router-view>
     </div>
   </body>
   <script src="assets/jquery/dist/jquery.min.js"></script>
   <script src="assets/materialize/dist/js/materialize.min.js"></script>
 
   <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
   <script>
     // Initialize Firebase
     var config = {
-      apiKey: "AIzaSyCpKPUCaFmLAqIl6AvO9mJowZf9J4tto88",
-      authDomain: "portfolio-c6ab8.firebaseapp.com",
-      databaseURL: "https://portfolio-c6ab8.firebaseio.com",
-      storageBucket: "portfolio-c6ab8.appspot.com",
-      messagingSenderId: "970482600321"
+      apiKey: "AIzaSyCZ75-IkmI4pZ8WAG52rLNCq2YU8MuoHBA",
+      authDomain: "postmaker-82524.firebaseapp.com",
+      databaseURL: "https://postmaker-82524.firebaseio.com",
+      storageBucket: "postmaker-82524.appspot.com",
+      messagingSenderId: "643974495836"
     };
     firebase.initializeApp(config);
   </script>
 
+
   <!-- Vue app -->
-  <script src="https://unpkg.com/vue@2.0.7/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
   <script src="bundle.js"></script>
 </html>
