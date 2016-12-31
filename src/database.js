@@ -1,11 +1,11 @@
 import firebase from 'firebase'
 
 firebase.initializeApp({
-  apiKey: "AIzaSyCZ75-IkmI4pZ8WAG52rLNCq2YU8MuoHBA",
-  authDomain: "postmaker-82524.firebaseapp.com",
-  databaseURL: "https://postmaker-82524.firebaseio.com",
-  storageBucket: "postmaker-82524.appspot.com",
-  messagingSenderId: "643974495836"
+  apiKey: "AIzaSyBaDMTMKZVFS1iS5oSWfMVvKB6akWODNUg",
+  authDomain: "mptysquare-295ed.firebaseapp.com",
+  databaseURL: "https://mptysquare-295ed.firebaseio.com",
+  storageBucket: "mptysquare-295ed.appspot.com",
+  messagingSenderId: "59554296307"
 })
 
 const db = firebase.database()
