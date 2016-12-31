@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col s3">
+  <div class="col m3">
     <ul>
       <li v-for="post in posts">
         <span>{{post.title}}</span>
@@ -7,7 +7,7 @@
       </li>
     </ul>
   </div>
-  <form @submit.prevent="submitted" class="col s9">
+  <form @submit.prevent="submitted" class="col m9">
     <div class="row">
       <div class="input-field col s12">
         <textarea :id="messageId" class="materialize-textarea"></textarea>
