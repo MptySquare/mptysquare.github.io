@@ -1,21 +1,23 @@
 import template from './home.page.html'
-import database from "./database"
-
-const db = {posts: database.ref('/posts')}
 
 export default {
   template: template,
-  data() {
-    return {
-      posts: {}
+  computed: {
+    posts() {
+      return this.$store.state.posts
+    },
+    postId() {
+      const postParam = parseInt(this.$route.params.post)
+      return (postParam) ? postParam : 0
+    },
+    post() {
+      return this.posts[this.postId]
+    },
+    nav() {
+      return {
+        next: `#/post/${ this.postId+1 }`,
+        prev: `#/post/${ this.postId-1 }`
+      }
     }
-  },
-  mounted() {
-    console.log('mounted home page')
-    db.posts.on('value', snap => {
-      const data = snap.val()
-      this.posts = data
-      console.log('data', this.posts)
-    })
   }
 }

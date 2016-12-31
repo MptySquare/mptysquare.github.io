@@ -1,7 +1,18 @@
-<div class="row">
-  <div v-for="post, index in posts" class="col s4">
-    <div class="card">
+<div class="container">
+  <div class="row">
+    <div v-if="post" class="col s12">
       <div class="card-content" v-html="post.message"> </div>
     </div>
+    <div v-else>
+      <h3>loading...</h3>
+    </div>
+  </div>
+  <div class="row">
+    <a v-if="postId > 0" class="btn" :href="nav.prev">
+      Prev
+    </a>
+    <a v-if="postId < posts.length-1" class="btn" :href="nav.next">
+      Next
+    </a>
   </div>
 </div>

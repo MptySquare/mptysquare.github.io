@@ -1,9 +1,18 @@
 <div class="row">
-  <form class="col s6" v-on:submit.prevent="submitted">
+  <div class="col s3">
+    <ul>
+      <li v-for="post in posts">{{post.title}}</li>
+    </ul>
+  </div>
+  <form class="col s3" v-on:submit.prevent="submitted">
     <div class="row">
       <div class="input-field col s12">
-        <textarea id="textarea1" v-model="message" class="materialize-textarea"></textarea>
-        <label for="textarea1">Textarea</label>
+        <textarea id="title" v-model="title" class="materialize-textarea"></textarea>
+        <label for="title">Title</label>
+      </div>
+      <div class="input-field col s12">
+        <textarea id="message" v-model="message" class="materialize-textarea"></textarea>
+        <label for="message">Message</label>
       </div>
     </div>
     <div class="row">
@@ -12,5 +21,5 @@
       </button>
     </div>
   </form>
-  <div id="preview" class="col s6" v-html="message"></div>
+  <preview :title="title" :message="message"></preview>
 </div>
