@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "watchify -p browserify-hmr -t [babelify ext .js .html] src/index.js -o public/bundle.js"
+    "watch": "watchify -p browserify-hmr -t [babelify ext .js] src/index.js -o dev/bundle.js",
+    "build:prod": "browserify -t [babelify ext .js] -t [uglifyify -x .js] src/index.js -o bundle.js"
   },
   "repository": {
     "type": "git",
@@ -32,7 +33,9 @@
     "babel-preset-env": "^1.1.4",
     "babel-preset-es2015": "^6.13.2",
     "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
     "browserify-hmr": "^0.3.5",
+    "uglifyify": "^3.0.4",
     "watchify": "^3.7.0"
   }
 }
