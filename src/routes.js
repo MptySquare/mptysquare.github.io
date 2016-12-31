@@ -2,9 +2,9 @@ import homepage from './home.page'
 import editorPage from './editor.page'
 
 const routes = [
-  { path: '/', redirect: '/post/', name: 'homepage', component: homepage },
-  { path: '/post', component: homepage },
-  { path: '/post/:post', component: homepage },
+  { path: '/', redirect: '/blog/', name: 'homepage', component: homepage },
+  { path: '/blog', component: homepage },
+  { path: '/blog/:uri', component: homepage },
   { path: '/editor', name: 'editor', component: editorPage }
 ]
 

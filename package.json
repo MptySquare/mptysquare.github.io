@@ -26,7 +26,10 @@
     "url": "https://github.com/maurop123/maurop123-portfolio/issues"
   },
   "homepage": "https://github.com/maurop123/maurop123-portfolio#readme",
-  "dependencies": {},
+  "dependencies": {
+    "firebase": "^3.6.4",
+    "vuex-router-sync": "^4.0.2"
+  },
   "devDependencies": {
     "babel-core": "^6.13.2",
     "babel-plugin-transform-html-import-to-string": "0.0.1",
