@@ -34,9 +34,6 @@ const Store = {
     }
   },
   mutations: {
-    // addPost(state, payload) {
-    //   state.posts.push(payload)
-    // },
     setPosts(state, payload) {
       state.posts = payload
     },
@@ -45,13 +42,7 @@ const Store = {
     setPost(context, payload) {
       if (!payload.id) payload.id = db.posts.push().key
       db.posts.child(payload.id).set(payload)
-      // context.commit('addPost', payload)
-    },
-    // createPost(context, payload) {
-    //   payload.id = db.posts.push().key
-    //   db.posts.child(payload.id).set(payload)
-    //   context.commit('addPost', payload)
-    // }
+    }
   },
   init(store) {
     db.posts.once('value', snap => {

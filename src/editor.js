@@ -1,14 +1,14 @@
 import template from "./editor.html"
 
-export default {
+export default { template,
   name: "editor",
-  template: template,
   data() {
     return {
       id: null,
       title: '',
       uri: '',
-      messageId: ''
+      messageId: '',
+      published: false
     }
   },
   computed: {
@@ -33,8 +33,8 @@ export default {
     },
     submitted(evt) {
       const message = this.markdownEditor.value()
-      const {id, title, uri} = this
-      this.$store.dispatch('setPost', {id, title, message, uri})
+      const {id, title, uri, published} = this
+      this.$store.dispatch('setPost',{id, title, message, uri, published})
     }
   },
   mounted() {
