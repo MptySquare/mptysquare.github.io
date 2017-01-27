@@ -16,7 +16,7 @@ export default {
     },
     post() {
       const latest = this.$store.getters.getLatestPost
-      if (!this.uri && latest) this.$router.push(latest.uri)
+      if (!this.uri && latest) this.$router.push(`/blog/${ latest.uri }`)
       const postByUri = (this.uri) ? this.$store.getters.getPostByUri : null
       return (postByUri) ? postByUri : latest
     },
