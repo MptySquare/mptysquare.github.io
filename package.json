@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "watchify -p browserify-hmr -t [babelify ext .js] src/index.js -o dev/bundle.js",
-    "build:prod": "browserify -t [babelify ext .js] -t [uglifyify -x .js] src/index.js -o bundle.js"
+    "watch:browserify": "watchify -p browserify-hmr -t [babelify ext .js] -t [stringify ext .html] src/index.js -o public/bundle.js",
+    "watch:server": "http-server",
+    "build:prod": "browserify -t [babelify ext .js] -t [stringify ext .html] -t [uglifyify -x .js] src/index.js -o dist/bundle.js",
+    "local": "npm-run-all --parallel watch:*"
   },
   "repository": {
     "type": "git",
@@ -38,6 +40,9 @@
     "babelify": "^7.3.0",
     "browserify": "^13.1.1",
     "browserify-hmr": "^0.3.5",
+    "http-server": "^0.9.0",
+    "npm-run-all": "^4.0.1",
+    "stringify": "^5.1.0",
     "uglifyify": "^3.0.4",
     "watchify": "^3.7.0"
   }
